@@ -1,0 +1,17 @@
+@import './_reset';
+@import './_variables';
+
+html {
+	font-size: $regular-text;
+}
+
+body {
+	font-family: $userfont;
+	line-height: $lineheight;
+	min-height: 100vh;
+	color: $text;
+	min-width: 320px;
+	position: relative;
+	overflow-x: hidden;
+	background-color: #000;
+}
