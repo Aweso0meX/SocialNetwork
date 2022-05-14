@@ -1,11 +1,20 @@
-const initialState = {}
+const TOGGLE_MENU = 'TOGGLE_MENU'
 
-// export const headerReducer = (state = initialState, action) => {
-// 	switch (action.type) {
-// 		case first:
-// 			return { ...state, ...payload }
+const initialState = {
+	menuActive: false,
+}
 
-// 		default:
-// 			return state
-// 	}
-// }
+export const headerReducer = (state = initialState, action) => {
+	switch (action.type) {
+		case TOGGLE_MENU:
+			return { ...state, menuActive: action.payload }
+
+		default:
+			return state
+	}
+}
+
+export const activeMenuAC = payload => ({
+	type: TOGGLE_MENU,
+	payload: payload,
+})

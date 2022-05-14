@@ -1,1 +1,10 @@
 @import '../../../scss/_variables';
+
+.menuWrapper {
+	position: absolute;
+	left: 50%;
+	width: 100%;
+	max-width: 1200px;
+	transform: translate(-50%);
+	background-color: red;
+}

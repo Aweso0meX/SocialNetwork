@@ -1,1 +1,71 @@
 @import '../../../scss/_variables';
+
+.header {
+	position: absolute;
+	top: 0;
+	width: 100%;
+	background-color: rgba(0, 0, 0, 0.7);
+	z-index: 100;
+	padding: 10px 0;
+	&_container {
+		max-width: 1200px;
+		margin: 0 auto;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+}
+
+.hamburgerWrapper {
+	width: 50px;
+	height: 50px;
+	cursor: pointer;
+	transition: $transition;
+	padding-top: 5px;
+}
+.hamburger,
+.hamburger::after,
+.hamburger::before {
+	height: 2px;
+	background-color: #fff;
+	transition: $transition;
+	border-radius: 5px;
+}
+.hamburger {
+	position: relative;
+	width: 50px;
+	display: inline-block;
+	&::after {
+		content: '';
+		position: absolute;
+		width: 100%;
+		bottom: -15px;
+	}
+	&::before {
+		content: '';
+		position: absolute;
+		width: 100%;
+		bottom: 15px;
+	}
+}
+
+.hamburgerWrapper:hover .hamburger,
+.hamburgerWrapper:hover .hamburger::after,
+.hamburgerWrapper:hover .hamburger::before {
+	background-color: $accent;
+}
+.hamburgerWrapper.active {
+	transform: translateY(100px);
+	background-color: rgba(0, 0, 0, 0.7);
+}
+.hamburgerWrapper.active .hamburger {
+	background-color: transparent;
+}
+.hamburgerWrapper.active .hamburger::after {
+	transform: rotate(225deg);
+	bottom: 0;
+}
+.hamburgerWrapper.active .hamburger::before {
+	transform: rotate(-225deg);
+	bottom: 0;
+}
