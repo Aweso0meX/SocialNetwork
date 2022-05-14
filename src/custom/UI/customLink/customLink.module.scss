@@ -1,6 +1,7 @@
 @import '../../../scss/_variables';
 
 .hvr_underline_from_center {
+	color: #fff;
 	display: inline-block;
 	vertical-align: middle;
 	-webkit-transform: perspective(1px) translateZ(0);
@@ -8,6 +9,8 @@
 	box-shadow: 0 0 1px rgba(0, 0, 0, 0);
 	position: relative;
 	overflow: hidden;
+	transition: $transition;
+	border-bottom: 3px solid transparent;
 }
 .hvr_underline_from_center:before {
 	content: '';
@@ -16,8 +19,8 @@
 	left: 51%;
 	right: 51%;
 	bottom: 0;
-	background: #2098d1;
-	height: 4px;
+	background: $accent;
+	height: 3px;
 	-webkit-transition-property: left, right;
 	transition-property: left, right;
 	-webkit-transition-duration: 0.3s;
@@ -26,8 +29,12 @@
 	transition-timing-function: ease-out;
 }
 .hvr_underline_from_center:hover:before,
-.hvr_underline_from_center:focus:before,
 .hvr_underline_from_center:active:before {
 	left: 0;
 	right: 0;
+}
+
+.active {
+	color: $accent;
+	border-bottom: 3px solid $accent;
 }

@@ -1,4 +1,5 @@
 import { Friends } from '../components/pages/Friends/Friends'
+import { Login } from '../components/pages/Login/Login'
 import { Music } from '../components/pages/Music/Music'
 import { News } from '../components/pages/News/News'
 import { Profile } from '../components/pages/Profile/Profile'
@@ -7,6 +8,8 @@ import { Video } from '../components/pages/Video/Video'
 //Паблик роуты
 export const PATH_HOMEPAGE = 'SocialNetwork/'
 export const PATH_NOTFOUND = '*'
+export const PATH_LOGIN = '/SocialNetwork/Login'
+export const PATH_REGISTRATION = '/SocialNetwork/Registration'
 
 //Приват роуты
 export const PATH_PROFILE = '/SocialNetwork/Profile'

@@ -2,8 +2,19 @@
 
 .WelcomeVideo {
 	position: absolute;
-	width: 100%;
+	top: 0;
 	height: 100%;
+	width: 100%;
 	object-fit: cover;
 	z-index: -1;
+	animation: homePageA 0.5s 1;
+}
+
+@keyframes homePageA {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
 }

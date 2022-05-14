@@ -1,13 +1,22 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom'
-import styles from './customLink.module.css'
+import { NavLink, useMatch } from 'react-router-dom'
+import styles from './customLink.module.scss'
 
-const customLink = ({ children, to, ...props }) => {
+const CustomLink = ({ children, to, ...props }) => {
+	const match = useMatch(to)
 	return (
-		<NavLink to={to} {...props} className={styles.hvr_underline_from_center}>
+		<NavLink
+			to={to}
+			{...props}
+			className={
+				match
+					? `${styles.hvr_underline_from_center} ${styles.active}`
+					: styles.hvr_underline_from_center
+			}
+		>
 			{children}
 		</NavLink>
 	)
 }
 
-export default customLink
+export default CustomLink

@@ -1,19 +1,16 @@
 import React from 'react'
 import styles from './Header.module.scss'
 import Logo from '../../../assets/Logo.svg'
-import { useDispatch, useSelector } from 'react-redux'
-import { activeMenuAC } from '../../../redux/headerReducer'
+import { ImExit } from 'react-icons/im'
+import { FaUserAlt, FaDesktop } from 'react-icons/fa'
+import { PATH_HOMEPAGE, PATH_LOGIN } from '../../../router/Routes'
+import CustomLink from '../../../custom/UI/customLink/customLink'
 
-export const Header = () => {
-	const toggleMenu = useSelector(state => state.header.menuActive)
-	const dispatch = useDispatch()
-	const activeMenu = () => {
-		dispatch(activeMenuAC(!toggleMenu))
-	}
+const Header = ({ activeMenu, desktopIcon, isAuth, exitLogin, toggleMenu }) => {
 	return (
 		<div className={styles.header}>
 			<div className={styles.header_container}>
-				<div>
+				<div className={styles.logoWrapper}>
 					<img src={Logo} alt='logo' />
 				</div>
 				<div
@@ -26,8 +23,31 @@ export const Header = () => {
 				>
 					<span className={styles.hamburger}></span>
 				</div>
-				<div></div>
+				<div className={styles.headerIcons}>
+					<CustomLink onClick={desktopIcon} to={PATH_HOMEPAGE}>
+						<FaDesktop />
+					</CustomLink>
+					{isAuth ? (
+						<CustomLink
+							onClick={exitLogin}
+							style={{ marginLeft: 50 }}
+							to={PATH_LOGIN}
+						>
+							<ImExit />
+						</CustomLink>
+					) : (
+						<CustomLink
+							onClick={desktopIcon}
+							style={{ marginLeft: 50 }}
+							to={PATH_LOGIN}
+						>
+							<FaUserAlt />
+						</CustomLink>
+					)}
+				</div>
 			</div>
 		</div>
 	)
 }
+
+export default Header

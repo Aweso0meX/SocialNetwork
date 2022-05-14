@@ -14,9 +14,9 @@ import {
 } from '../../../router/Routes'
 
 export const pathLinks = [
-	{ path: PATH_PROFILE, name: 'Профиль', icon: FaUserCircle },
-	{ path: PATH_FRIENDS, name: 'Друзья', icon: FaUserFriends },
-	{ path: PATH_MUSIC, name: 'Музыка', icon: FaMusic },
-	{ path: PATH_VIDEO, name: 'Видео', icon: FaVideo },
-	{ path: PATH_NEWS, name: 'Новости', icon: FaNewspaper },
+	{ path: PATH_PROFILE, name: 'Профиль', Component: FaUserCircle },
+	{ path: PATH_FRIENDS, name: 'Друзья', Component: FaUserFriends },
+	{ path: PATH_MUSIC, name: 'Музыка', Component: FaMusic },
+	{ path: PATH_VIDEO, name: 'Видео', Component: FaVideo },
+	{ path: PATH_NEWS, name: 'Новости', Component: FaNewspaper },
 ]

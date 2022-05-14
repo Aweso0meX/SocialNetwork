@@ -1,19 +1,26 @@
 @import '../../../scss/_variables';
 
 .header {
-	position: absolute;
-	top: 0;
-	width: 100%;
-	background-color: rgba(0, 0, 0, 0.7);
+	background-color: $background-opacity;
 	z-index: 100;
 	padding: 10px 0;
 	&_container {
-		max-width: 1200px;
+		max-width: 1500px;
 		margin: 0 auto;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+		z-index: 200;
 	}
+}
+.headerIcons {
+	font-size: 2rem;
+}
+.loginIcon {
+	margin-left: 30px;
+}
+.logoWrapper {
+	z-index: 300;
 }
 
 .hamburgerWrapper {
@@ -22,6 +29,8 @@
 	cursor: pointer;
 	transition: $transition;
 	padding-top: 5px;
+	border-radius: 0 0 20px 20px;
+	z-index: 2;
 }
 .hamburger,
 .hamburger::after,
@@ -54,10 +63,7 @@
 .hamburgerWrapper:hover .hamburger::before {
 	background-color: $accent;
 }
-.hamburgerWrapper.active {
-	transform: translateY(100px);
-	background-color: rgba(0, 0, 0, 0.7);
-}
+
 .hamburgerWrapper.active .hamburger {
 	background-color: transparent;
 }
