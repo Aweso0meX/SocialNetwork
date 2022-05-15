@@ -4,7 +4,7 @@ import Layout from '../components/layout/Layout'
 import { HomePage } from '../components/pages/HomePage/HomePage'
 import { Login } from '../components/pages/Login/Login'
 import NotFound from '../components/pages/NotFound/NotFound'
-import { Registration } from '../components/pages/Registration/Registration'
+import { RegistrationBuisness } from '../components/pages/Registration/RegistrationBuisness'
 import AuthHoC from './AuthHoC'
 import {
 	PATH_HOMEPAGE,
@@ -21,7 +21,7 @@ export const AppRouter = () => {
 				<Route path={PATH_HOMEPAGE} element={<HomePage />} />
 				<Route path={PATH_NOTFOUND} element={<NotFound />} />
 				<Route path={PATH_LOGIN} element={<Login />} />
-				<Route path={PATH_REGISTRATION} element={<Registration />} />
+				<Route path={PATH_REGISTRATION} element={<RegistrationBuisness />} />
 				{privateRoutes.map(route => {
 					const Component = route.Component
 					return (
