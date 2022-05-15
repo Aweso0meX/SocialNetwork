@@ -5,6 +5,7 @@
 	z-index: 100;
 	padding: 10px 0;
 	&_container {
+		position: relative;
 		max-width: 1500px;
 		margin: 0 auto;
 		display: flex;
@@ -74,4 +75,42 @@
 .hamburgerWrapper.active .hamburger::before {
 	transform: rotate(-225deg);
 	bottom: 0;
+}
+
+.authMessage {
+	position: absolute;
+	top: 250%;
+	left: 35.5%;
+	background-color: rgba(43, 99, 50, 0.6);
+	width: 500px;
+	height: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: $radius;
+	visibility: hidden;
+	opacity: 0;
+	padding: 0 50px;
+	animation: weclomeMessage 3s 1;
+	border: 2px solid #000;
+}
+.welcomeText {
+	margin-left: 20px;
+}
+
+@keyframes weclomeMessage {
+	0% {
+		opacity: 0;
+		visibility: visible;
+	}
+	30% {
+		opacity: 1;
+	}
+	80% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+		visibility: hidden;
+	}
 }

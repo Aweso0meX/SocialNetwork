@@ -9,6 +9,30 @@
 	z-index: -1;
 	animation: homePageA 0.5s 1;
 }
+.welcomeLogin {
+	height: 80vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.formWrapper {
+	background-color: $background-opacity;
+	border-radius: $radius;
+	padding: 20px;
+	text-align: center;
+	border: 2px solid $border;
+	animation: welcomeLoginA 0.5s 1 ease-out;
+}
+.form {
+	display: flex;
+	flex-direction: column;
+	min-width: 350px;
+}
+.btnWrapper {
+	display: flex;
+	justify-content: flex-end;
+	margin-top: 10px;
+}
 
 @keyframes homePageA {
 	0% {
@@ -16,5 +40,16 @@
 	}
 	100% {
 		opacity: 1;
+	}
+}
+
+@keyframes welcomeLoginA {
+	0% {
+		opacity: 0;
+		transform: translateY(200px);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0);
 	}
 }

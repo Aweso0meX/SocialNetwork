@@ -1,0 +1,16 @@
+@import '../../../scss/_variables';
+
+.input {
+	padding: 10px 20px;
+	border: 2px solid transparent;
+	margin-bottom: 10px;
+	border-radius: 10px;
+	transition: $transition;
+}
+.input:focus {
+	border: 2px solid $accent;
+}
+.labelWrapper {
+	display: flex;
+	padding-left: 10px;
+}

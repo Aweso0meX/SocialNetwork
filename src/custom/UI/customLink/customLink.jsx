@@ -2,7 +2,7 @@ import React from 'react'
 import { NavLink, useMatch } from 'react-router-dom'
 import styles from './customLink.module.scss'
 
-const CustomLink = ({ children, to, ...props }) => {
+export const CustomLink = ({ children, to, ...props }) => {
 	const match = useMatch(to)
 	return (
 		<NavLink
@@ -18,5 +18,3 @@ const CustomLink = ({ children, to, ...props }) => {
 		</NavLink>
 	)
 }
-
-export default CustomLink
