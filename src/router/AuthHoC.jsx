@@ -4,7 +4,7 @@ import { Navigate, useLocation } from 'react-router-dom'
 import { PATH_LOGIN } from './Routes'
 
 const AuthHoC = ({ children }) => {
-	const isAuth = useSelector(state => state.header.isAuth)
+	const isAuth = useSelector(state => state.login.isAuth)
 	const location = useLocation()
 	if (!isAuth) {
 		return <Navigate to={PATH_LOGIN} state={{ from: location }} />

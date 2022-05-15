@@ -66,10 +66,10 @@ const HomePageFormBuisness = () => {
 		if (loginTextValue.length <= 5) {
 			changeLoginDirty(true)
 		} else if (loginTextValue.length > 5) {
-			disptach(changeLoginAC(true))
 			disptach(activeMenuAC(false))
 			disptach(changeTextPassAC(''))
 			disptach(changeTextLoginAC(''))
+			disptach(changeLoginAC(true))
 		}
 	}
 	//Вывод ошибки при сбросе фокуса
