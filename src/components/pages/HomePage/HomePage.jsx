@@ -12,14 +12,7 @@ export const HomePage = () => {
 			<video autoPlay muted loop className={styles.WelcomeVideo}>
 				<source src={HomePageVideo} type='video/mp4' />
 			</video>
-			{isAuth ? null : (
-				<div className={styles.welcomeLogin}>
-					<div className={styles.formWrapper}>
-						<img src={Logo} alt='logo' />
-						<HomePageFormBuisness isAuth={isAuth} />
-					</div>
-				</div>
-			)}
+			{isAuth ? null : <HomePageFormBuisness isAuth={isAuth} />}
 		</div>
 	)
 }

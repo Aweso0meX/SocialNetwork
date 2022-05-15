@@ -1,5 +1,6 @@
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
+import { useNavigate } from 'react-router-dom'
 import { activeMenuAC } from '../../../redux/headerReducer/actions'
 import {
 	changeLoginAC,
@@ -18,6 +19,7 @@ import {
 	HOMEPAGE_LOGIN_TEXT_VALUE,
 	HOMEPAGE_PASS_TEXT_VALUE,
 } from '../../../redux/loginReducer/selectors'
+import { PATH_PROFILE } from '../../../router/Routes'
 import HomePageForm from './HomePageForm'
 
 const HomePageFormBuisness = () => {
@@ -28,23 +30,23 @@ const HomePageFormBuisness = () => {
 	const loginTextValue = useSelector(HOMEPAGE_LOGIN_TEXT_VALUE)
 	const passTextValue = useSelector(HOMEPAGE_PASS_TEXT_VALUE)
 
-	const disptach = useDispatch()
+	const dispatch = useDispatch()
 
 	const loginLenght = e => {
-		disptach(changeValidLoginErrorAC(e))
+		dispatch(changeValidLoginErrorAC(e))
 	}
 	const passLenght = e => {
-		disptach(changeValidPassErrorAC(e))
+		dispatch(changeValidPassErrorAC(e))
 	}
 	const changeLoginDirty = e => {
-		disptach(changeValidLoginActiveAC(e))
+		dispatch(changeValidLoginActiveAC(e))
 	}
 	const changePassDirty = e => {
-		disptach(changeValidPassActiveAC(e))
+		dispatch(changeValidPassActiveAC(e))
 	}
 
 	const changeTextLogin = e => {
-		disptach(changeTextLoginAC(e.target.value))
+		dispatch(changeTextLoginAC(e.target.value))
 		if (loginTextValue.length < 5 && loginTextValue.length >= 0) {
 			loginLenght('Логин должен быть длинней')
 		} else {
@@ -52,24 +54,28 @@ const HomePageFormBuisness = () => {
 		}
 	}
 	const changeTextPass = e => {
-		disptach(changeTextPassAC(e.target.value))
+		dispatch(changeTextPassAC(e.target.value))
 		if (passTextValue.length > 0) {
 			passLenght('Пароль не обязателен')
 		} else {
 			passLenght('')
 		}
 	}
-
+	const navigate = useNavigate()
+	const goProfile = () => {
+		navigate(PATH_PROFILE)
+	}
 	//HOMEPAGE BUTTON:
 	const enter = e => {
 		e.preventDefault()
 		if (loginTextValue.length <= 5) {
 			changeLoginDirty(true)
 		} else if (loginTextValue.length > 5) {
-			disptach(activeMenuAC(false))
-			disptach(changeTextPassAC(''))
-			disptach(changeTextLoginAC(''))
-			disptach(changeLoginAC(true))
+			dispatch(activeMenuAC(false))
+			dispatch(changeTextPassAC(''))
+			dispatch(changeTextLoginAC(''))
+			dispatch(changeLoginAC(true))
+			goProfile()
 		}
 	}
 	//Вывод ошибки при сбросе фокуса
@@ -94,6 +100,7 @@ const HomePageFormBuisness = () => {
 				break
 		}
 	}
+
 	return (
 		<HomePageForm
 			loginDirty={loginDirty}
