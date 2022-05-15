@@ -7,7 +7,7 @@ import { Video } from '../components/pages/Video/Video'
 
 //Паблик роуты
 export const PATH_HOMEPAGE = 'SocialNetwork/'
-export const PATH_NOTFOUND = '*'
+export const PATH_NOTFOUND = '/*'
 export const PATH_LOGIN = '/SocialNetwork/Login'
 export const PATH_REGISTRATION = '/SocialNetwork/Registration'
 

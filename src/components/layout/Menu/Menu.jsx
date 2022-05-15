@@ -2,7 +2,7 @@ import React from 'react'
 import { useSelector } from 'react-redux'
 import { CustomLink } from '../../../custom/UI/customLink/customLink'
 import styles from './Menu.module.scss'
-import { pathLinks } from './pathLinks'
+import { pathLinks } from '../../../router/pathLinks'
 
 export const Menu = () => {
 	const toggleMenu = useSelector(state => state.header.menuActive)

@@ -10,17 +10,23 @@ import {
 	changeValidPassActiveAC,
 	changeValidPassErrorAC,
 } from '../../../redux/loginReducer/actions'
+import {
+	HOMEPAGE_LOGIN_DIRTY,
+	HOMEPAGE_PASS_DIRTY,
+	HOMEPAGE_LOGIN_ERROR,
+	HOMEPAGE_PASS_ERROR,
+	HOMEPAGE_LOGIN_TEXT_VALUE,
+	HOMEPAGE_PASS_TEXT_VALUE,
+} from '../../../redux/loginReducer/selectors'
 import HomePageForm from './HomePageForm'
 
 const HomePageFormBuisness = () => {
-	//Валидация
-	const loginDirty = useSelector(state => state.login.homepageLoginActive)
-	const passDirty = useSelector(state => state.login.homepagePassActive)
-	const loginError = useSelector(state => state.login.homepageLoginError)
-	const passError = useSelector(state => state.login.homepagePassError)
-
-	const loginTextValue = useSelector(state => state.login.homepageLoginInput)
-	const passTextValue = useSelector(state => state.login.homepagePassInput)
+	const loginDirty = useSelector(HOMEPAGE_LOGIN_DIRTY)
+	const passDirty = useSelector(HOMEPAGE_PASS_DIRTY)
+	const loginError = useSelector(HOMEPAGE_LOGIN_ERROR)
+	const passError = useSelector(HOMEPAGE_PASS_ERROR)
+	const loginTextValue = useSelector(HOMEPAGE_LOGIN_TEXT_VALUE)
+	const passTextValue = useSelector(HOMEPAGE_PASS_TEXT_VALUE)
 
 	const disptach = useDispatch()
 

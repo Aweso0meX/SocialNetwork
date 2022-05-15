@@ -11,7 +11,7 @@ import {
 	PATH_MUSIC,
 	PATH_VIDEO,
 	PATH_NEWS,
-} from '../../../router/Routes'
+} from './Routes'
 
 export const pathLinks = [
 	{ path: PATH_PROFILE, name: 'Профиль', Component: FaUserCircle },
