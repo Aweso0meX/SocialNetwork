@@ -1,11 +1,17 @@
 import React from 'react'
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { CustomLink } from '../../../custom/UI/customLink/customLink'
 import styles from './Menu.module.scss'
 import { pathLinks } from '../../../router/pathLinks'
+import { activeMenuAC } from '../../../redux/headerReducer/actions'
 
 export const Menu = () => {
 	const toggleMenu = useSelector(state => state.header.menuActive)
+	const dispatch = useDispatch()
+
+	const closeMenu = () => {
+		dispatch(activeMenuAC(false))
+	}
 	return (
 		<div
 			onClick={e => e.stopPropagation()}
@@ -19,6 +25,7 @@ export const Menu = () => {
 				const Component = link.Component
 				return (
 					<div
+						onClick={closeMenu}
 						key={link.path}
 						className={
 							toggleMenu

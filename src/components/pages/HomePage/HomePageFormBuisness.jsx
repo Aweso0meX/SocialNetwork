@@ -1,6 +1,6 @@
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, useLocation } from 'react-router-dom'
 import { activeMenuAC } from '../../../redux/headerReducer/actions'
 import {
 	changeLoginAC,
@@ -61,22 +61,27 @@ const HomePageFormBuisness = () => {
 			passLenght('')
 		}
 	}
+	//Переадресация при логине
+	const location = useLocation()
+	const fromPage = location.state?.from?.pathname || '/SocialNetwork/'
 	const navigate = useNavigate()
 	const goProfile = () => {
-		navigate(PATH_HOMEPAGE)
+		navigate(fromPage)
 	}
+
 	//HOMEPAGE BUTTON:
 	const enter = e => {
 		e.preventDefault()
+		e.stopPropagation()
 		if (loginTextValue.length <= 5) {
 			changeLoginDirty(true)
 		} else if (loginTextValue.length > 5) {
-			dispatch(activeMenuAC(true))
 			dispatch(changeTextPassAC(''))
 			dispatch(changeTextLoginAC(''))
 			dispatch(changeLoginAC(true))
 			goProfile()
 		}
+		dispatch(activeMenuAC(true))
 	}
 	//Вывод ошибки при сбросе фокуса
 	const blurHandler = e => {

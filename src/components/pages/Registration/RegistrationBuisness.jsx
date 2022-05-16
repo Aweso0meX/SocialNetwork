@@ -38,6 +38,7 @@ import {
 import { useNavigate } from 'react-router-dom'
 import { changeLoginAC } from '../../../redux/loginReducer/actions'
 import Registration from './Registration'
+import { activeMenuAC } from '../../../redux/headerReducer/actions'
 
 export const RegistrationBuisness = () => {
 	const navigate = useNavigate()
@@ -169,6 +170,7 @@ export const RegistrationBuisness = () => {
 			// eslint-disable-next-line no-useless-escape
 			/^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i
 		e.preventDefault()
+		e.stopPropagation()
 		if (nameValue.length < 5) {
 			changeNameDirty(true)
 		}
@@ -197,6 +199,7 @@ export const RegistrationBuisness = () => {
 			dispatch(changeRegPassAgainAC(''))
 			dispatch(changeLoginAC(true))
 			goProfile()
+			dispatch(activeMenuAC(true))
 		}
 	}
 
