@@ -8,6 +8,12 @@
 
 @include wide() {
 	//1200px --
+	.WelcomeVideo {
+		display: none;
+	}
+	.WelcomeMobile {
+		display: block;
+	}
 }
 
 @include desktop() {
@@ -15,6 +21,14 @@
 }
 @include tablet() {
 	// 768px--
+	.formWrapper {
+		width: 90%;
+		margin: 0 auto;
+	}
+	.form {
+		min-width: 0;
+		width: 100%;
+	}
 }
 @include mobile() {
 	// 568px--

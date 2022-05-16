@@ -9,6 +9,16 @@
 	z-index: -1;
 	animation: openPageA 0.5s 1;
 }
+.backImageMobile {
+	position: absolute;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+	z-index: -1;
+	animation: openPageA 0.5s 1;
+	display: none;
+}
 
 @keyframes openPageA {
 	0% {
@@ -18,3 +28,5 @@
 		opacity: 1;
 	}
 }
+
+@import './LoginMedia.module.scss';

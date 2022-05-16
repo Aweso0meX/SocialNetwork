@@ -9,6 +9,16 @@
 	z-index: -1;
 	animation: openPageA 0.5s 1;
 }
+.backImage {
+	position: absolute;
+	top: 0;
+	height: 100vh;
+	width: 100%;
+	object-fit: cover;
+	z-index: -1;
+	animation: openPageA 0.5s 1;
+	display: none;
+}
 .registrPage {
 	height: 80vh;
 	display: flex;
@@ -53,3 +63,5 @@
 		transform: translateY(0);
 	}
 }
+
+@import './RegistrationMedia.module.scss';

@@ -6,6 +6,8 @@ import { MyInput } from '../../../custom/UI/MyInput/MyInput'
 import { MyButton } from '../../../custom/UI/MyButton/MyButton'
 import { CustomLink } from '../../../custom/UI/customLink/customLink'
 import { PATH_LOGIN } from '../../../router/Routes'
+import backMobile from '../../../assets/RegistrMobileBack.jpg'
+
 const Registration = ({
 	dirtyName,
 	errorName,
@@ -35,6 +37,7 @@ const Registration = ({
 			<video autoPlay muted loop className={styles.backVideo}>
 				<source src={regVideo} type='video/mp4' />
 			</video>
+			<img src={backMobile} alt='' className={styles.backImage} />
 			<div className={styles.registrPage}>
 				<div className={styles.formWrapper}>
 					<img src={Logo} alt='logo' />

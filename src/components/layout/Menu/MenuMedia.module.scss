@@ -1,0 +1,54 @@
+@include hd_plus() {
+	// 1920px --
+}
+
+@include hd() {
+	//1440px --
+}
+
+@include wide() {
+	//1200px --
+	.menuWrapper {
+		width: 300px;
+		left: auto;
+		right: 0;
+		transform: translate(-50%) translateY(-300px);
+		background-color: rgba(0, 0, 0, 0.9);
+		flex-direction: column;
+		justify-content: space-between;
+		text-align: center;
+		border-radius: 30px;
+		opacity: 0;
+		border: 1px solid $accent;
+	}
+	.active {
+		transform: translate(-50%) translateY(0);
+		opacity: 1;
+	}
+	.linkWrapper {
+		margin-bottom: 20px;
+	}
+}
+
+@include desktop() {
+	// 992px--
+}
+@include tablet() {
+	// 768px--
+	.menuWrapper {
+		right: -15%;
+	}
+}
+@include mobile() {
+	// 568px--
+	.menuWrapper {
+		right: -20%;
+	}
+}
+@include mobile-s() {
+	// 414px--
+	.menuWrapper {
+		width: 350px;
+		right: -42%;
+	}
+}

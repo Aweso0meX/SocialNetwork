@@ -17,10 +17,13 @@
 .headerIcons {
 	font-size: 2rem;
 	margin-left: 40px;
+	display: flex;
+	align-items: center;
 }
 .loginIcon {
 	margin-left: 30px;
 }
+
 .logoWrapper {
 	z-index: 300;
 }
@@ -116,3 +119,5 @@
 		visibility: hidden;
 	}
 }
+
+@import './HeaderMedia.module.scss';

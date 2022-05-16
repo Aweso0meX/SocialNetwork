@@ -9,6 +9,16 @@
 	z-index: -1;
 	animation: homePageA 0.5s 1;
 }
+.WelcomeMobile {
+	position: absolute;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+	z-index: -1;
+	animation: homePageA 0.5s 1;
+	display: none;
+}
 .welcomeLogin {
 	height: 80vh;
 	display: flex;
@@ -53,3 +63,5 @@
 		transform: translateY(0);
 	}
 }
+
+@import './HomePageMedia.module.scss';

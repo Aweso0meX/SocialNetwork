@@ -1,0 +1,60 @@
+@include hd_plus() {
+	// 1920px --
+}
+
+@include hd() {
+	//1440px --
+}
+
+@include wide() {
+	//1200px --
+	.header {
+		position: sticky;
+		padding: 5px 0;
+		top: 0;
+		background-color: #000;
+		&_container {
+			margin: 0 auto;
+			padding: 0 20px;
+		}
+	}
+	.desktopIconWrapper {
+		display: none;
+	}
+	.hamburgerWrapper {
+		position: absolute;
+		right: 8%;
+		padding-top: 0;
+	}
+	.headerIcons {
+		font-size: 2rem;
+	}
+}
+
+@include desktop() {
+	// 992px--
+	.hamburgerWrapper {
+		right: 10%;
+	}
+}
+@include tablet() {
+	// 768px--
+	.hamburgerWrapper {
+		right: 12%;
+	}
+}
+@include mobile() {
+	// 568px--
+	.hamburgerWrapper {
+		right: 14%;
+	}
+	.authMessage {
+		width: 300px;
+	}
+}
+@include mobile-s() {
+	// 414px--
+	.hamburgerWrapper {
+		right: 20%;
+	}
+}

@@ -1,5 +1,4 @@
 import { Friends } from '../components/pages/Friends/Friends'
-import { Login } from '../components/pages/Login/Login'
 import { Music } from '../components/pages/Music/Music'
 import { News } from '../components/pages/News/News'
 import { Profile } from '../components/pages/Profile/Profile'

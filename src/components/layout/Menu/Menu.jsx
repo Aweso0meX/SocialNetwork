@@ -25,9 +25,11 @@ export const Menu = () => {
 								: styles.animationWrapper
 						}
 					>
-						<CustomLink to={link.path}>
-							<Component /> {link.name}
-						</CustomLink>
+						<div className={styles.linkWrapper}>
+							<CustomLink className={styles.link} to={link.path}>
+								<Component /> {link.name}
+							</CustomLink>
+						</div>
 					</div>
 				)
 			})}

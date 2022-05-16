@@ -8,6 +8,17 @@
 
 @include wide() {
 	//1200px --
+	.backVideo {
+		display: none;
+	}
+	.backImage {
+		display: block;
+	}
+	.formWrapper {
+		transform: scale(0.85);
+		max-width: 100%;
+		margin: 0 auto;
+	}
 }
 
 @include desktop() {
@@ -15,6 +26,9 @@
 }
 @include tablet() {
 	// 768px--
+	.form {
+		min-width: 0;
+	}
 }
 @include mobile() {
 	// 568px--

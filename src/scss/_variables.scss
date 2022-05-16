@@ -24,49 +24,49 @@ $breakpoint_mobile-s: 414px;
 
 @mixin hd_plus() {
 	@media screen and (max-width: $breakpoint_hd_plus) {
-		//1440px ++
+		//1440px --
 		@content;
 	}
 }
 
 @mixin hd() {
 	@media screen and (max-width: $breakpoint_hd) {
-		//1440px ++
+		//1440px --
 		@content;
 	}
 }
 
 @mixin wide() {
 	@media screen and (max-width: $breakpoint_wide) {
-		//1200px ++
+		//1200px --
 		@content;
 	}
 }
 
 @mixin desktop() {
 	@media screen and (max-width: $breakpoint_desktop) {
-		//992px ++
+		//992px --
 		@content;
 	}
 }
 
 @mixin tablet() {
 	@media screen and (max-width: $breakpoint_tablet) {
-		//768px ++
+		//768px --
 		@content;
 	}
 }
 
 @mixin mobile() {
 	@media screen and (max-width: $breakpoint_mobile) {
-		//568px ++
+		//568px --
 		@content;
 	}
 }
 
 @mixin mobile-s() {
 	@media screen and (max-width: $breakpoint_mobile-s) {
-		//414px ++
+		//414px --
 		@content;
 	}
 } ;

@@ -32,7 +32,9 @@ const Header = ({ activeMenu, desktopIcon, isAuth, exitLogin, toggleMenu }) => {
 				</div>
 				<div className={styles.headerIcons}>
 					<CustomLink onClick={desktopIcon} to={PATH_HOMEPAGE}>
-						<FaDesktop />
+						<div className={styles.desktopIconWrapper}>
+							<FaDesktop />
+						</div>
 					</CustomLink>
 					{isAuth ? (
 						<CustomLink
