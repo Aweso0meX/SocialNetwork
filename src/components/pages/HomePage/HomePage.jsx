@@ -33,7 +33,10 @@ export const HomePage = () => {
 			<div className={styles.pageWrapper}></div>
 			{isAuth && (
 				<div className={styles.clockWrapper}>
-					<span>{clock.getHours()} : </span>
+					<span>
+						{clock.getHours() >= 10 ? clock.getHours() : `0${clock.getHours()}`}
+						:
+					</span>
 					<span>
 						{clock.getMinutes() >= 10
 							? clock.getMinutes()

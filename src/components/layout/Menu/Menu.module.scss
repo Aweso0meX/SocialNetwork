@@ -7,18 +7,19 @@
 	max-width: 1500px;
 	transform: translate(-50%) translateY(-80px);
 	opacity: 1;
-	background-color: $background-opacity;
+	background-color: #000;
 	display: flex;
 	justify-content: space-between;
 	padding: 24px 50px;
 	transition: $transition;
-	z-index: 3;
+	z-index: 10;
 }
 .active {
 	transform: translate(-50%) translateY(0);
 	border-radius: 0 0 50px 50px;
 	visibility: visible;
 	opacity: 1;
+	border-bottom: 1px solid $accent;
 }
 .animationWrapper {
 	opacity: 0;
