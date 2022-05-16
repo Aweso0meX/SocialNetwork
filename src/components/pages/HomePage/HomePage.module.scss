@@ -45,6 +45,7 @@
 	text-align: center;
 	border: 2px solid $border;
 	animation: welcomeLoginA 0.5s 1 ease-out;
+	z-index: 4;
 }
 .form {
 	display: flex;
