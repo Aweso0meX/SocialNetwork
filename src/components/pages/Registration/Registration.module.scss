@@ -8,7 +8,6 @@
 	object-fit: cover;
 	z-index: -1;
 	animation: openPageA 0.5s 1;
-	display: none;
 }
 .backImage {
 	position: absolute;
@@ -18,7 +17,6 @@
 	object-fit: cover;
 	z-index: -1;
 	animation: openPageA 0.5s 1;
-	display: block;
 }
 .registrPage {
 	height: 80vh;

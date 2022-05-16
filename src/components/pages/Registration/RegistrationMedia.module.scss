@@ -5,14 +5,7 @@
 @include hd() {
 	//1440px --
 }
-@media screen and (min-width: 1200px) {
-	.backVideo {
-		display: block;
-	}
-	.backImage {
-		display: none;
-	}
-}
+
 @include wide() {
 	//1200px --
 

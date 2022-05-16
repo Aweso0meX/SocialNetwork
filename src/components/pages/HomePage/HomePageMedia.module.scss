@@ -6,12 +6,6 @@
 	//1440px --
 }
 @media screen and (min-width: 1200px) {
-	.WelcomeVideo {
-		display: block;
-	}
-	.WelcomeMobile {
-		display: none;
-	}
 }
 
 @include wide() {

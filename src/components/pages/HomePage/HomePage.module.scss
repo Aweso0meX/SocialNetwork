@@ -8,7 +8,6 @@
 	object-fit: cover;
 	z-index: -1;
 	animation: homePageA 0.5s 1;
-	display: none;
 }
 .WelcomeMobile {
 	position: absolute;
@@ -18,7 +17,6 @@
 	object-fit: cover;
 	z-index: -1;
 	animation: homePageA 0.5s 1;
-	display: block;
 }
 .welcomeLogin {
 	height: 80vh;

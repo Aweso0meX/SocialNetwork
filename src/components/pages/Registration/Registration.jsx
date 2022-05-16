@@ -7,6 +7,7 @@ import { MyButton } from '../../../custom/UI/MyButton/MyButton'
 import { CustomLink } from '../../../custom/UI/customLink/customLink'
 import { PATH_LOGIN } from '../../../router/Routes'
 import backMobile from '../../../assets/RegistrMobileBack.jpg'
+import { useMediaQuery } from 'react-responsive'
 
 const Registration = ({
 	dirtyName,
@@ -32,12 +33,16 @@ const Registration = ({
 	passAgainValue,
 	enter,
 }) => {
+	const isDesktop = useMediaQuery({ minWidth: 1200 })
+	const isMobile = useMediaQuery({ maxWidth: 1199 })
 	return (
 		<div>
-			<video autoPlay muted loop className={styles.backVideo}>
-				<source src={regVideo} type='video/mp4' />
-			</video>
-			<img src={backMobile} alt='' className={styles.backImage} />
+			{isDesktop && (
+				<video autoPlay muted loop className={styles.backVideo}>
+					<source src={regVideo} type='video/mp4' />
+				</video>
+			)}
+			{isMobile && <img src={backMobile} alt='' className={styles.backImage} />}
 			<div className={styles.registrPage}>
 				<div className={styles.formWrapper}>
 					<img src={Logo} alt='logo' />
