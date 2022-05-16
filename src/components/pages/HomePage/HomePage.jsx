@@ -9,7 +9,13 @@ export const HomePage = () => {
 	const isAuth = useSelector(state => state.login.isAuth)
 	return (
 		<div>
-			<video autoPlay muted loop className={styles.WelcomeVideo}>
+			<video
+				onClick={e => e.stopPropagation()}
+				autoPlay
+				muted
+				loop
+				className={styles.WelcomeVideo}
+			>
 				<source src={HomePageVideo} type='video/mp4' />
 			</video>
 			<img src={mobileBack} className={styles.WelcomeMobile} alt='' />

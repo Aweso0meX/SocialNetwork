@@ -10,7 +10,13 @@ export const Login = () => {
 	const isAuth = useSelector(IS_AUTH)
 	return (
 		<div>
-			<video autoPlay muted loop className={styles.backVideo}>
+			<video
+				onClick={e => e.stopPropagation()}
+				autoPlay
+				muted
+				loop
+				className={styles.backVideo}
+			>
 				<source src={loginVideo} type='video/mp4' />
 			</video>
 			<img src={loginBackMobile} alt='' className={styles.backImageMobile} />
