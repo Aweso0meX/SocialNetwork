@@ -34,13 +34,7 @@ const Registration = ({
 }) => {
 	return (
 		<div>
-			<video
-				onClick={e => e.stopPropagation()}
-				autoPlay
-				muted
-				loop
-				className={styles.backVideo}
-			>
+			<video autoPlay muted loop className={styles.backVideo}>
 				<source src={regVideo} type='video/mp4' />
 			</video>
 			<img src={backMobile} alt='' className={styles.backImage} />

@@ -5,15 +5,17 @@
 @include hd() {
 	//1440px --
 }
-
-@include wide() {
-	//1200px --
+@media screen and (min-width: 1200px) {
 	.backVideo {
-		display: none;
-	}
-	.backImage {
 		display: block;
 	}
+	.backImage {
+		display: none;
+	}
+}
+@include wide() {
+	//1200px --
+
 	.formWrapper {
 		transform: scale(0.85);
 		max-width: 100%;

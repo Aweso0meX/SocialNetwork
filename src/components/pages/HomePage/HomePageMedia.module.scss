@@ -5,15 +5,17 @@
 @include hd() {
 	//1440px --
 }
+@media screen and (min-width: 1200px) {
+	.WelcomeVideo {
+		display: block;
+	}
+	.WelcomeMobile {
+		display: none;
+	}
+}
 
 @include wide() {
 	//1200px --
-	.WelcomeVideo {
-		display: none;
-	}
-	.WelcomeMobile {
-		display: block;
-	}
 }
 
 @include desktop() {
