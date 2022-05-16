@@ -19,7 +19,7 @@ import {
 	HOMEPAGE_LOGIN_TEXT_VALUE,
 	HOMEPAGE_PASS_TEXT_VALUE,
 } from '../../../redux/loginReducer/selectors'
-import { PATH_PROFILE } from '../../../router/Routes'
+import { PATH_HOMEPAGE } from '../../../router/Routes'
 import HomePageForm from './HomePageForm'
 
 const HomePageFormBuisness = () => {
@@ -47,7 +47,7 @@ const HomePageFormBuisness = () => {
 
 	const changeTextLogin = e => {
 		dispatch(changeTextLoginAC(e.target.value))
-		if (loginTextValue.length < 5 && loginTextValue.length >= 0) {
+		if (loginTextValue.length <= 5 && loginTextValue.length >= 0) {
 			loginLenght('Логин должен быть длинней')
 		} else {
 			loginLenght('')
@@ -63,7 +63,7 @@ const HomePageFormBuisness = () => {
 	}
 	const navigate = useNavigate()
 	const goProfile = () => {
-		navigate(PATH_PROFILE)
+		navigate(PATH_HOMEPAGE)
 	}
 	//HOMEPAGE BUTTON:
 	const enter = e => {
@@ -71,7 +71,7 @@ const HomePageFormBuisness = () => {
 		if (loginTextValue.length <= 5) {
 			changeLoginDirty(true)
 		} else if (loginTextValue.length > 5) {
-			dispatch(activeMenuAC(false))
+			dispatch(activeMenuAC(true))
 			dispatch(changeTextPassAC(''))
 			dispatch(changeTextLoginAC(''))
 			dispatch(changeLoginAC(true))
@@ -83,7 +83,7 @@ const HomePageFormBuisness = () => {
 		// eslint-disable-next-line default-case
 		switch (e.target.name) {
 			case 'login':
-				if (loginTextValue.length < 5 && loginTextValue.length >= 0) {
+				if (loginTextValue.length <= 5 && loginTextValue.length >= 0) {
 					loginLenght('Логин должен быть длинней')
 				} else {
 					loginLenght('')

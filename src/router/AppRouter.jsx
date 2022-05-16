@@ -1,17 +1,17 @@
 import React from 'react'
 import { Route, Routes } from 'react-router-dom'
-import Layout from '../components/layout/Layout'
+import { Layout } from '../components/layout/Layout'
 import { HomePage } from '../components/pages/HomePage/HomePage'
 import { Login } from '../components/pages/Login/Login'
-import NotFound from '../components/pages/NotFound/NotFound'
+import { NotFound } from '../components/pages/NotFound/NotFound'
 import { RegistrationBuisness } from '../components/pages/Registration/RegistrationBuisness'
-import AuthHoC from './AuthHoC'
+import { AuthHoC } from './AuthHoC'
 import {
 	PATH_HOMEPAGE,
 	PATH_NOTFOUND,
 	PATH_LOGIN,
-	privateRoutes,
 	PATH_REGISTRATION,
+	privateRoutes,
 } from './Routes'
 
 export const AppRouter = () => {

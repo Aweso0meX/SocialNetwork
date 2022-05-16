@@ -8,6 +8,7 @@ export const Menu = () => {
 	const toggleMenu = useSelector(state => state.header.menuActive)
 	return (
 		<div
+			onClick={e => e.stopPropagation()}
 			className={
 				toggleMenu
 					? `${styles.menuWrapper} ${styles.active}`

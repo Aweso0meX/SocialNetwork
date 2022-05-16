@@ -9,7 +9,7 @@ import { MdOutlineDoneOutline } from 'react-icons/md'
 
 const Header = ({ activeMenu, desktopIcon, isAuth, exitLogin, toggleMenu }) => {
 	return (
-		<div className={styles.header}>
+		<div onClick={e => e.stopPropagation()} className={styles.header}>
 			<div className={styles.header_container}>
 				{isAuth ? (
 					<div className={styles.authMessage}>

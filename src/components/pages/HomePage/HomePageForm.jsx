@@ -22,7 +22,6 @@ const HomePageForm = ({
 		<div className={styles.welcomeLogin}>
 			<div className={styles.formWrapper}>
 				<img src={Logo} alt='logo' />
-
 				<form className={styles.form}>
 					{loginDirty && loginError && (
 						<div style={{ color: 'red' }}>{loginError}</div>

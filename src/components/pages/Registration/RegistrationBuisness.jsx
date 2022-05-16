@@ -1,5 +1,5 @@
 import React from 'react'
-import { PATH_PROFILE } from '../../../router/Routes'
+import { PATH_HOMEPAGE } from '../../../router/Routes'
 import { useDispatch, useSelector } from 'react-redux'
 import {
 	CHANGE_REG_NAME_TEXT,
@@ -42,7 +42,7 @@ import Registration from './Registration'
 export const RegistrationBuisness = () => {
 	const navigate = useNavigate()
 	const goProfile = () => {
-		navigate(PATH_PROFILE)
+		navigate(PATH_HOMEPAGE)
 	}
 	const nameValue = useSelector(CHANGE_REG_NAME_TEXT)
 	const secondNameValue = useSelector(CHANGE_REG_SECOND_NAME_TEXT)
