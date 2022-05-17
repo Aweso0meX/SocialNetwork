@@ -9,7 +9,7 @@ import {
 } from './consts'
 
 const initialState = {
-	isAuth: true,
+	isAuth: false,
 
 	//HOMEPAGE
 	homepageLoginInput: '',
