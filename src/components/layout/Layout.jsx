@@ -1,5 +1,5 @@
 import React from 'react'
-import { useDispatch, useSelector } from 'react-redux'
+import { useDispatch } from 'react-redux'
 import { Outlet } from 'react-router-dom'
 import { activeMenuAC } from '../../redux/headerReducer/actions'
 import { HeaderBuisness } from './Header/HeaderBuisness'
