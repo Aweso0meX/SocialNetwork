@@ -12,6 +12,7 @@
 	z-index: 5;
 	justify-content: space-between;
 	animation: userDescriptionAnimante 1s 1;
+	margin-bottom: 20px;
 }
 .userDescr {
 	width: 30%;
@@ -52,14 +53,27 @@
 	color: $accent;
 	margin-top: 10px;
 	margin-bottom: 10px;
+	z-index: 99;
 	&:hover {
 		background-color: $accent;
 		color: #000;
 	}
 }
+.statusWrapper {
+	display: flex;
+	align-items: center;
+}
 .userStatusTitle {
 	margin-right: 10px;
 	color: $special-text;
+}
+.statusArea {
+	color: #000;
+	border-radius: $radius;
+	resize: none;
+	padding: 5px;
+	font-weight: 700;
+	border: 2px solid $accent;
 }
 .userSecondDescr {
 	width: 30%;
@@ -72,12 +86,6 @@
 	margin-right: 10px;
 }
 
-.userSecDescrWork {
-	color: green;
-}
-.onlineStatus span {
-	color: green;
-}
 .onlineStatus {
 	text-align: right;
 	display: flex;
@@ -99,6 +107,13 @@
 	&:hover {
 		color: #fff;
 	}
+}
+
+.contactDisabled {
+	font-size: 2rem;
+	color: rgb(190, 43, 43, 0.5);
+	transition: $transition;
+	margin-right: 10px;
 }
 
 @keyframes userDescriptionAnimante {

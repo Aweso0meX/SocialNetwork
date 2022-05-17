@@ -199,7 +199,6 @@ export const RegistrationBuisness = () => {
 			dispatch(changeRegPassAgainAC(''))
 			dispatch(changeLoginAC(true))
 			goProfile()
-			dispatch(activeMenuAC(true))
 		}
 	}
 

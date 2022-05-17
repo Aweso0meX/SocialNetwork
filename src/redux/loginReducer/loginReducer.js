@@ -9,7 +9,7 @@ import {
 } from './consts'
 
 const initialState = {
-	isAuth: false,
+	isAuth: true,
 
 	//HOMEPAGE
 	homepageLoginInput: '',
@@ -27,17 +27,17 @@ export const loginReducer = (state = initialState, action) => {
 		case CHANGE_LOGIN:
 			return { ...state, isAuth: action.payload }
 		case CHANGE_TEXT_LOGIN_HOMEPAGE:
-			//
+			//Инпуты
 			return { ...state, homepageLoginInput: action.payload }
 		case CHANGE_TEXT_PASS_HOMEPAGE:
 			return { ...state, homepagePassInput: action.payload }
 		case VALIDATION_LOGIN_ACTIVE:
-			//
+			//Валидация
 			return { ...state, homepageLoginActive: action.payload }
 		case VALIDATION_PASS_ACTIVE:
 			return { ...state, homepagePassActive: action.payload }
 		case VALIDATION_LOGIN_ERROR:
-			//
+			//Ошибки
 			return { ...state, homepageLoginError: action.payload }
 		case VALIDATION_PASS_ERROR:
 			return { ...state, homepagePassError: action.payload }

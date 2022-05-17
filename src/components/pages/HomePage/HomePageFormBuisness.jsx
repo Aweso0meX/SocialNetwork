@@ -81,7 +81,6 @@ const HomePageFormBuisness = () => {
 			dispatch(changeLoginAC(true))
 			goProfile()
 		}
-		dispatch(activeMenuAC(true))
 	}
 	//Вывод ошибки при сбросе фокуса
 	const blurHandler = e => {
