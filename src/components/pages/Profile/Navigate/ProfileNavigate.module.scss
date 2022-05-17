@@ -5,4 +5,36 @@
 	min-height: 600px;
 	background-color: $background-opacity;
 	border-radius: $radius;
+	z-index: 5;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	animation: navigateA 1s 1;
+}
+
+.navigateItem {
+	cursor: pointer;
+	margin-bottom: 10px;
+	padding: 5px;
+	border-bottom: 1px solid transparent;
+	transition: $transition;
+	&:hover {
+		border-bottom: 1px solid $accent;
+	}
+}
+.activeItem {
+	color: #000;
+	background-color: $accent;
+	border-radius: $radius;
+}
+@keyframes navigateA {
+	0% {
+		opacity: 0;
+		transform: translateX(-200px);
+	}
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
 }

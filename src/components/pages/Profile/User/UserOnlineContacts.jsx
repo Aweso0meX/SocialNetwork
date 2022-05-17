@@ -8,8 +8,6 @@ import {
 	FaDribbbleSquare,
 } from 'react-icons/fa'
 
-import { Link } from 'react-router-dom'
-
 const UserOnlineContacts = ({ PROFILE }) => {
 	return (
 		<div className={styles.onlineStatus}>
@@ -20,37 +18,49 @@ const UserOnlineContacts = ({ PROFILE }) => {
 			)}
 			<div className={styles.userContact}>
 				{PROFILE.twitter ? (
-					<Link className={styles.ContactLink} to={PROFILE.twitter}>
+					<a
+						className={styles.ContactLink}
+						href={'https://twitter.com/' + PROFILE.twitter}
+					>
 						<FaTwitterSquare />
-					</Link>
+					</a>
 				) : (
 					<FaTwitterSquare className={styles.contactDisabled} />
 				)}
 				{PROFILE.facebook ? (
-					<Link className={styles.ContactLink} to={PROFILE.facebook}>
+					<a
+						className={styles.ContactLink}
+						href={'https://www.facebook.com/' + PROFILE.facebook}
+					>
 						<FaFacebookSquare />
-					</Link>
+					</a>
 				) : (
 					<FaFacebookSquare className={styles.contactDisabled} />
 				)}
 				{PROFILE.linkedin ? (
-					<Link className={styles.ContactLink} to={PROFILE.linkedin}>
+					<a
+						className={styles.ContactLink}
+						href={'https://www.linkedin.com/in/' + PROFILE.linkedin}
+					>
 						<FaLinkedin />
-					</Link>
+					</a>
 				) : (
 					<FaLinkedin className={styles.contactDisabled} />
 				)}
 				{PROFILE.instagram ? (
-					<Link className={styles.ContactLink} to={PROFILE.instagram}>
+					<a
+						className={styles.ContactLink}
+						href={'http://www.instagram.com/' + PROFILE.instagram}
+					>
 						<FaInstagramSquare />
-					</Link>
+					</a>
 				) : (
 					<FaInstagramSquare className={styles.contactDisabled} />
 				)}
 				{PROFILE.dribble ? (
-					<Link className={styles.ContactLink} to={PROFILE.dribble}>
+					<a className={styles.ContactLink} href={PROFILE.dribble}>
 						<FaDribbbleSquare />
-					</Link>
+					</a>
 				) : (
 					<FaDribbbleSquare className={styles.contactDisabled} />
 				)}

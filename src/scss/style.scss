@@ -8,10 +8,11 @@ html {
 body {
 	font-family: $userfont;
 	line-height: $lineheight;
-	min-height: 100vh;
+	height: 100vh;
 	color: $text;
 	min-width: 320px;
 	position: relative;
+	overflow-y: hidden;
 
 	background-color: #000;
 }

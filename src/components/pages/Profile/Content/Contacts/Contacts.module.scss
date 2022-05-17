@@ -1,0 +1,35 @@
+@import '../../../../../scss/variables';
+
+.settingsMain {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	background-color: $background-opacity;
+	padding: 20px;
+	border-radius: $radius;
+	height: 100%;
+	width: 100%;
+	animation: openA 0.5s 1;
+}
+
+.settingsItem {
+	width: 50%;
+	margin: 0 auto;
+	margin-bottom: 20px;
+}
+.btnWrapper {
+	width: 50%;
+	margin: 0 auto;
+	display: flex;
+	justify-content: center;
+}
+@keyframes openA {
+	0% {
+		opacity: 0;
+		transform: translateY(200px);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}

@@ -5,4 +5,16 @@
 	min-height: 600px;
 	background-color: $background-opacity;
 	border-radius: $radius;
+	animation: friendsBarA 1s 1;
+}
+
+@keyframes friendsBarA {
+	0% {
+		opacity: 0;
+		transform: translateX(200px);
+	}
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
 }

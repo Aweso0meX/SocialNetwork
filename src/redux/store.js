@@ -5,12 +5,14 @@ import { loginReducer } from './loginReducer/loginReducer'
 import { ProfileReducer } from './ProfileReducer/ProfileReducer'
 import { regReducer } from './registrationReducer/regReducer'
 import thunk from 'redux-thunk'
+import { navigateReducer } from './ProfileReducer/NavigationReducer/NavigationReducer'
 
 const rootReducer = combineReducers({
 	header: headerReducer,
 	login: loginReducer,
 	reg: regReducer,
 	profile: ProfileReducer,
+	navigate: navigateReducer,
 })
 export const store = createStore(
 	rootReducer,

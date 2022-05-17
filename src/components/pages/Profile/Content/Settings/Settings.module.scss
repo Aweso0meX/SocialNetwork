@@ -1,0 +1,60 @@
+@import '../../../../../scss/variables';
+
+.settingsMain {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	background-color: $background-opacity;
+	padding: 20px;
+	border-radius: $radius;
+	height: 100%;
+	animation: openA 0.5s 1;
+}
+
+.settingsWrapper {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	width: 100%;
+}
+.settingsItem {
+	width: 48%;
+	margin-bottom: 5px;
+}
+.title {
+	width: 100%;
+	text-align: center;
+	color: $accent;
+	font-size: 1.5rem;
+}
+.btnWrapper {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+.labelWrapper {
+	font-size: 2rem;
+	margin-right: 20px;
+}
+.checkBox {
+	display: flex;
+	align-items: center;
+}
+.CheckBoxWrapper {
+	display: flex;
+	align-items: center;
+}
+.inputCheckbox {
+	transform: scale(2);
+	cursor: pointer;
+}
+@keyframes openA {
+	0% {
+		opacity: 0;
+		transform: translateY(200px);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}

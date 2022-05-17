@@ -1,10 +1,9 @@
 import React from 'react'
-import ProfileContent from './Content/ProfileContent'
+import Content from './Content/Content'
 import FriendsBar from './FriendsBar/FriendsBar'
 import ProfileNavigate from './Navigate/ProfileNavigate'
 import styles from './Profile.module.scss'
 import UserBuisness from './User/UserBuisness'
-
 export const Profile = () => {
 	return (
 		<div className={styles.pageWrapper}>
@@ -13,7 +12,9 @@ export const Profile = () => {
 			<UserBuisness />
 			<div className={styles.profileContentWrapper}>
 				<ProfileNavigate />
-				<ProfileContent />
+
+				<Content />
+
 				<FriendsBar />
 			</div>
 		</div>
